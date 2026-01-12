@@ -24,7 +24,7 @@ contracts = {
 selected = st.selectbox("Pilih Futures Contract", list(contracts.keys()), index=1)
 
 risk_dollar = st.number_input("Risk per Trade ($)", min_value=1, value=250)
-stop_loss_input = st.number_input("Stop Loss (in points)", min_value=0.25, value=25)
+stop_loss_input = st.number_input("Stop Loss (in points)", min_value=1, value=25)
 
 # ambil data kontrak terpilih
 tick_size = contracts[selected]["tick_size"]
@@ -56,3 +56,4 @@ st.write(f"**Risk per Contract:** ${risk_per_contract:.2f}")
 st.success(f"👉 **Jumlah Kontrak Maksimal: {contract_qty:.2f}**")
 
 st.caption("Selalu bulatkan ke bawah (floor) sebelum entry.")
+
