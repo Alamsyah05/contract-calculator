@@ -54,8 +54,6 @@ st.write(f"**Risk per Contract:** ${risk_per_contract:.2f}")
 
 st.success(f"👉 **Max Contract: {contract_qty:.2f}**")
 
-st.caption("Selalu bulatkan ke bawah (floor) sebelum entry.")
-
 
 
 
