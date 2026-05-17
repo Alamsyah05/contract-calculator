@@ -4,7 +4,6 @@ st.set_page_config(
     page_title="Futures Position Size Calculator", layout="centered")
 
 st.title("📘 Futures Position Size Calculator")
-st.write("Pilih kontrak, masukkan risk dan stop-loss, lalu kalkulasi jumlah kontrak.")
 
 # ===============================
 # 1. DATA KONTRAK FUTURES
@@ -21,7 +20,7 @@ contracts = {
 # ===============================
 # 2. USER INPUTS
 # ===============================
-selected = st.selectbox("Pilih Futures Contract", list(contracts.keys()), index=1)
+selected = st.selectbox("Futures Contract", list(contracts.keys()), index=1)
 
 risk_dollar = st.number_input("Risk per Trade ($)", min_value=1, value=500)
 stop_loss_input = st.number_input("Stop Loss (in points)", min_value=1, value=25)
@@ -46,14 +45,14 @@ else:
 # ===============================
 # 4. OUTPUT
 # ===============================
-st.subheader("📊 Hasil Kalkulasi")
+st.subheader("📊 Calculation Result")
 
 st.write(f"**Tick Size:** {tick_size}")
 st.write(f"**Tick Value:** ${tick_value:.2f}")
 st.write(f"**Stop Loss (ticks):** {stop_loss_ticks:.2f} ticks")
 st.write(f"**Risk per Contract:** ${risk_per_contract:.2f}")
 
-st.success(f"👉 **Jumlah Kontrak Maksimal: {contract_qty:.2f}**")
+st.success(f"👉 **Max Contract: {contract_qty:.2f}**")
 
 st.caption("Selalu bulatkan ke bawah (floor) sebelum entry.")
 
