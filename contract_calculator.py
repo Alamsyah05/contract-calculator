@@ -49,7 +49,6 @@ st.subheader("📊 Calculation Result")
 
 st.write(f"**Tick Size:** {tick_size}")
 st.write(f"**Tick Value:** ${tick_value:.2f}")
-st.write(f"**Stop Loss (ticks):** {stop_loss_ticks:.2f} ticks")
 st.write(f"**Risk per Contract:** ${risk_per_contract:.2f}")
 
 st.success(f"👉 **Max Contract: {contract_qty:.2f}**")
